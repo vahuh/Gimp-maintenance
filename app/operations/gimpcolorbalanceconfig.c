@@ -325,6 +325,8 @@ gimp_color_balance_config_reset (GimpConfig *config)
   gimp_config_reset_property (G_OBJECT (config), "preserve-luminosity");
 }
 
+
+
 static gboolean
 gimp_color_balance_config_copy (GimpConfig  *src,
                                 GimpConfig  *dest,
@@ -357,6 +359,7 @@ gimp_color_balance_config_copy (GimpConfig  *src,
 }
 
 
+
 /*  public functions  */
 
 void
@@ -372,3 +375,4 @@ gimp_color_balance_config_reset_range (GimpColorBalanceConfig *config)
 
   g_object_thaw_notify (G_OBJECT (config));
 }
+
