@@ -357,3 +357,16 @@ gimp_hue_saturation_config_reset_range (GimpHueSaturationConfig *config)
 
   g_object_thaw_notify (G_OBJECT (config));
 }
+
+void
+gimp_hue_saturation_config_reset_hue_range (GimpHueSaturationConfig *config)
+{
+  g_return_if_fail (GIMP_IS_HUE_SATURATION_CONFIG (config));
+
+  g_object_freeze_notify (G_OBJECT (config));
+
+  gimp_config_reset_property (G_OBJECT (config), "hue");
+ 
+
+  g_object_thaw_notify (G_OBJECT (config));
+}

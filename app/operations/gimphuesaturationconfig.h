@@ -33,6 +33,7 @@
 #define GIMP_HUE_SATURATION_CONFIG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  GIMP_TYPE_HUE_SATURATION_CONFIG, GimpHueSaturationConfigClass))
 
 
+
 typedef struct _GimpHueSaturationConfigClass GimpHueSaturationConfigClass;
 
 struct _GimpHueSaturationConfig
@@ -57,6 +58,8 @@ struct _GimpHueSaturationConfigClass
 GType   gimp_hue_saturation_config_get_type    (void) G_GNUC_CONST;
 
 void    gimp_hue_saturation_config_reset_range (GimpHueSaturationConfig *config);
+
+void gimp_hue_saturation_config_reset_hue_range (GimpHueSaturationConfig *config);
 
 
 #endif /* __GIMP_HUE_SATURATION_CONFIG_H__ */

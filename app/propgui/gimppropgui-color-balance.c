@@ -133,8 +133,8 @@ _gimp_prop_gui_new_color_balance (GObject                  *config,
   gtk_widget_show (button);
 
   g_signal_connect_swapped (button, "clicked",
-                            G_CALLBACK (gimp_color_balance_config_reset_range),
-                            config);
+  G_CALLBACK (gimp_color_balance_config_reset_range),config);
+  
 
   button = gimp_prop_check_button_new (config,
                                        "preserve-luminosity",

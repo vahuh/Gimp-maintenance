@@ -265,6 +265,14 @@ _gimp_prop_gui_new_hue_saturation (GObject                  *config,
                             G_CALLBACK (gimp_hue_saturation_config_reset_range),
                             config);
 
+  button = gtk_button_new_with_mnemonic (_("Reset Hue Value"));
+  gtk_box_pack_end (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_widget_show (button);
+
+  g_signal_connect_swapped (button, "clicked",
+                            G_CALLBACK (gimp_hue_saturation_config_reset_hue_range),
+                            config);
+
   g_signal_connect_object (config, "notify::range",
                            G_CALLBACK (hue_saturation_range_notify),
                            range_radio, 0);
